@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import {
+  RiCloseFill,
   RiHeartFill,
+  RiMenu3Fill,
   RiSearchLine,
   RiShoppingCartFill,
   RiUserFill,
 } from "react-icons/ri";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header>
       <nav>
@@ -66,6 +69,48 @@ const Navbar = () => {
               <a href="#contact">contact</a>
             </li>
           </ul>
+        </div>
+
+        {/* For mobile */}
+        <div className="nm-nav">
+          <div className="nm-container container">
+            <a href="" className="logo">
+              Shoppee
+            </a>
+            <ul
+              className="nav-menu"
+              style={{ transform: menuOpen && "translate(0%)" }}
+            >
+              <li>
+                <a href="#home">home</a>
+              </li>
+              <li>
+                <a href="#categories">categories</a>
+              </li>
+              <li>
+                <a href="#shop">shop</a>
+              </li>
+              <li>
+                <a href="#deal">deal</a>
+              </li>
+              <li>
+                <a href="#testimonial">testimonial</a>
+              </li>
+              <li>
+                <a href="#blog">blog</a>
+              </li>
+              <li>
+                <a href="#contact">contact</a>
+              </li>
+            </ul>
+            <div className="menu-btn">
+              {!menuOpen ? (
+                <RiMenu3Fill size={30} onClick={() => setMenuOpen(true)} />
+              ) : (
+                <RiCloseFill size={30} onClick={() => setMenuOpen(false)} />
+              )}
+            </div>
+          </div>
         </div>
       </nav>
     </header>
