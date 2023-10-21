@@ -4,9 +4,8 @@ import { categoryData } from "../../constants/index";
 import CategoryCard from "../Sections/CategoryCard";
 
 const Categories = () => {
-  console.log(categoryData);
   return (
-    <section className="categories">
+    <section id="categories">
       <div className="title">
         <h2>Categories</h2>
       </div>

@@ -54,7 +54,7 @@ body {
   max-width: 1920px;
 }
 section {
-  padding: 7rem 0;
+  padding: 2rem 0;
   transition: var(--transition);
 }
 

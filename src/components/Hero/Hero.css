@@ -58,13 +58,13 @@
   justify-content: space-between;
   gap: 1rem;
   position: absolute;
-  bottom: -3rem;
+  bottom: -5rem;
 }
 .selection-card img {
   height: 111px;
   width: 111px;
   padding: 1rem;
-  background: url(../images/bgthumnail1.png);
+  background: url(../images/bgthumbnail.png);
   background-position: center;
   background-size: cover;
   border-radius: var(--border-radius-1);
