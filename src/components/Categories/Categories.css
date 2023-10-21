@@ -1,0 +1,39 @@
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.category-card {
+  text-align: center;
+  cursor: pointer;
+}
+.category-card img {
+  background: url(../images/bgthumbnail.png);
+  background-size: cover;
+  background-position: center;
+  border: var(--border-1);
+  border-radius: var(--border-radius-2);
+}
+.category-card h4{
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+
+/*____________ RESPONSIVE TABLET_________________*/
+@media screen and (max-width:1024px) {
+    .categories-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/*____________ RESPONSIVE MOBILE_________________*/
+@media screen and (max-width: 600px) {
+    .categories-container{
+        grid-template-columns: 1fr;
+    }
+}
